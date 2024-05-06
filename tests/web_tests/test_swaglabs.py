@@ -55,7 +55,7 @@ def swag() -> Generator[Swaglabs, None, None]:
     swag = Swaglabs()
     swag.configure(
         base_url=os.environ.get("BASE_URL", "https://www.saucedemo.com"),
-        browser_configuration={"headless": True},
+        browser_configuration={"headless": False},
     )
     yield swag
     swag.close()
